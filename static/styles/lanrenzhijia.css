@@ -1,0 +1,18 @@
+
+/* slider */
+#cslider{width:690px;height:500px;overflow:hidden;padding-top:100px;position:relative;margin:0 auto;}
+.cscroll{width:620px;height:500px;margin:0 auto;overflow:hidden;position:relative;}
+.cscrollContainer{position: relative;width:1815px;left:0px;}
+.cscrollContainer .ccurrent .cinside{width:230px;height:288px;}
+.cscrollContainer .cpanel{width:170px;height:235px;float: left;margin-right:25px;display:inline;}
+.cpanel .cinside{display:block;position:relative; }
+.cinside img{height:100%;width:100%;border-radius: 4px;}
+.cscroll li .cinside span{width:167px;height:150px;line-height:25px;display:none;position:absolute;bottom:-100px;left:16px;background-color:#2FABDB;font-size:14px;color:#FFF;text-align:left;padding:2px 15px;border-radius: 8px;}
+.cscroll li.ccurrent .cinside span{display:block;}
+.cbtnMode a.cbtn{background:url('/styles/images/arr.png') no-repeat;}
+.cbtnMode a.cbtn{width:20px; height:39px;position:absolute;top:174px; }
+.cbtnMode a.cprev{left:5px;background-position:0 -61px;}
+.cbtnMode a.cprev:hover{background-position:0 -102px;}
+.cbtnMode a.cnext{right:5px;background-position:-50px -61px;}
+.cbtnMode a.cnext:hover{background-position:-50px -102px;}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

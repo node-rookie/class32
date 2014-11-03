@@ -1,0 +1,39 @@
+<div show-message style="display:none" >
+   <div class="alert alert-success" style="text-align:center;font-size:18px;" >
+	 {{success}}
+   </div>
+</div>
+     	<nav class="collapse navbar-collapse" role="navigation" style="margin-top:50px">
+			<ul class="nav navbar-nav navbar-right" ng-show="me">
+				<li>
+					<img ng-src="{{me.headImg}}" title="{{me.name}}" class="img-rounded" />
+				</li>
+				<li>
+					<a href="" ng-click="logout()">Log out</a>
+				</li>
+			</ul>
+		 </nav>
+<span>大奖有的。。。。</span>
+<form class="form-horizontal" ng-submit="login()">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="email" required id="inputEmail"  placeholder="Email" ng-model="email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">密码</label>
+    <div class="controls">
+      <input type="password" required id="inputPassword" placeholder="密码"  ng-model="password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> 记住我
+      </label>
+      <button type="submit" class="btn">登录</button>
+	  <a href="#/reg">注册</a>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,44 @@
+		<link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="/styles/login.css">
+<div class="login_area"> 
+   <div id="mc_login_title">三年二班</div>
+   <div class="signin" id="login">
+    <form id="loginform" autocomplete="off" name="loginform"  method="post" style="margin:0" ng-submit="login()">		
+       <div id="qrlogin" class="qrlogin">
+        <h4 class="qr_title_text">我们的小二班</h4>
+        <div id="qrlogin_step1" style="display: block;">
+         <div id="qrlogin_bg" class="qrlogin_bg">
+          <img id="qrlogin_img"  class="qrlogin_img" src="/images/class32.jpg" />
+         </div>
+        </div>
+       </div>
+       <div id="signinSep" class="signin_sep">
+        <span class="signin_sep_line"></span> 
+        <span class="signin_sep_text">情谊</span>
+       </div>
+       <div id="signinArea" class="signin-area">
+		<h4 class="input_login_text">帐号密码登录</h4>
+        <div class="signin-area-bg">
+         <div class="padder">
+          <div id="err_m" class="err_m"></div>
+          <div class="sign-input">
+           <span class="input"><input ng-model="email" type="email" required class="input01" tabindex="1" placeholder="Email帐号" /></span>
+          </div>
+          <div class="sign-input">
+           <span class="input"><input ng-model="password" required maxlength="16" type="password" class="input01" tabindex="2" placeholder="密码" /></span>
+          </div>
+         </div>
+         <div class="logins">
+              <input type="submit" class="btn btn-success" id="login_button" value="登  录" />
+              <input type="button" onclick="window.location='#/reg'" class="btn btn-info" id="reg_button" value="注  册" />
+         </div>
+        </div>
+       </div>
+    </form>
+   </div>
+   <footer class="copyright_page_footer">
+    Copyright &copy; 2014-2016 Suny He. All Rights Reserved.
+   </footer>
+   <div id="showMessage" style="display:none" >
+   </div>
+  </div>

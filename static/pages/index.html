@@ -1,0 +1,380 @@
+<link rel="stylesheet" href="/styles/mq.css">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="stylesheet" href="/styles/lanrenzhijia.css">
+<script src="http://open.web.meitu.com/sources/xiuxiu.js" type="text/javascript">
+</script>
+<div class="black" style="height:100%">
+    <div id="bgAllImage" num="1">
+        <img class="bgAllImage" src="/images/1.jpg">
+    </div>
+    <div class="wrap">
+        <div id="main_container" style="display: block;">
+            <div class="panel main-panel" id="panel-0" style="display: block;">
+                <div id="panelBodyWrapper-0" class="panel_body_container" style=" bottom: 50px;">
+                    <div id="panelBody-0" class="panel_body ">
+                        <div id="mainTopAll" cmd="void">
+                            <div class="accountHeader">
+                                <div class="avatar_wrap">
+                                    <img class="headImg" src="{{me.headImg}}" width="40" height="40">
+                                    <span id="user_online_state" class="state_online">
+                                    </span>
+                                </div>
+                                <span class="text_ellipsis user_nick">
+                                    {{me.name}}
+                                </span>
+                                <span class="text_ellipsis user_shuoshuo">
+                                    {{me.sign}}
+                                </span>
+                                <div class="icons_list">
+                                    <a class="i_qzone" target="_blank" title="动态">
+                                        动态
+                                    </a>
+                                    <a id="contactList" class="i_mail" target="_blank" title="通讯录">
+                                        通讯录
+                                    </a>
+                                    <a class="i_weibo" target="_blank" title="地理位置">
+                                        地理位置
+                                    </a>
+                                    <a class="i_video" target="_blank" title="相册">
+                                        相册
+                                    </a>
+                                    <a class="i_qqwebsite" target="_blank" title="许愿墙">
+                                        许愿墙
+                                    </a>
+                                    <a class="i_music" target="_blank" title="音乐">
+                                        音乐
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel selected" id="panel-1">
+                            <header id="panelHeader-1" class="panel_header">
+                                <h1 id="panelTitle-1" class="text_ellipsis padding_20">
+                                    会话
+                                </h1>
+                            </header>
+                            <div id="panelBodyWrapper-1" class="panel_body_container" style="top: 45px; ">
+                                <div id="panelBody-1" class="panel_body ">
+                                    <div id="current_chat_scroll_area" class="scrollWrapper" style="overflow: hidden;"
+                                    cmd="void">
+                                        <ul id="current_chat_list" class="list list_white" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <ul id="pannelMenuList-1" class="pannel_menu_list">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel " id="panel-2" cmd="void">
+                            <header id="panelHeader-2" class="panel_header">
+                                <h1 id="panelTitle-2" class="text_ellipsis padding_20">
+                                    成员
+                                </h1>
+                            </header>
+                            <div id="panelBodyWrapper-2" class="panel_body_container" style="top: 45px; ">
+                                <div id="panelBody-2" class="panel_body ">
+                                    <div id="contactList" class="tab tab_animate member_tab">
+                                    </div>
+                                </div>
+                                <ul id="pannelMenuList-2" class="pannel_menu_list">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel " id="panel-3" cmd="void">
+                            <header id="panelHeader-3" class="panel_header">
+                                <h1 id="panelTitle-3" class="text_ellipsis padding_20">
+                                    动态
+                                </h1>
+                            </header>
+                            <div id="panelBodyWrapper-3" class="panel_body_container" style="top: 45px; overflow: hidden;">
+                                <div id="panelBody-3" class="panel_body plugin" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+                                </div>
+                                <ul id="pannelMenuList-3" class="pannel_menu_list">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel " id="panel-4" cmd="void">
+                            <header id="panelHeader-4" class="panel_header">
+                                <h1 id="panelTitle-4" class="text_ellipsis padding_20">
+                                    设置
+                                </h1>
+                            </header>
+                            <div id="panelBodyWrapper-4" class="panel_body_container" style="top: 45px; overflow: hidden;">
+                                <div id="panelBody-4" class="panel_body list_page setting" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+                                    <div class="group">
+                                        <div class="row clearfix">
+                                            <div class="cloumn">
+                                                <img class="avatar headImg" src="{{me.headImg}}">
+                                            </div>
+                                            <div class="cloumn profile_title_setting">
+                                                <div class="text_ellipsis profile_name row">
+                                                    {{me.name}}
+                                                </div>
+                                                <div class="row profile_account">
+                                                    {{me.email}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="group">
+                                        <div class="row profile_signature">
+                                            <span class="label">
+                                                个性签名:
+                                            </span>
+                                            <span>
+                                                {{me.sign}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="group clickAble" id="modifyPersonalInfo">
+                                        <div class="row ">
+                                            修改个人信息
+                                            <span class="more_icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="group clickAble" cmd="clickShowAbout">
+                                        <div class="row ">
+                                            关于
+                                            <span class="more_icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="about_qq_all" class="group" style="display:none;">
+                                        <div class="row ">
+                                            <span class="label">
+                                                Version
+                                            </span>
+                                            V1.0
+                                        </div>
+                                        <div class="row ">
+                                            Terms
+                                        </div>
+                                        <div class="row " cmd="clickFeedBack">
+                                            Feedback
+                                            <span class="more_icon">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="group clickAble" cmd="clickLogout">
+                                        <div class="row loginout" ng-click="logout()">
+                                            Log Out
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul id="pannelMenuList-4" class="pannel_menu_list">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="pannelMenuList-0" class="pannel_menu_list">
+                    </ul>
+                </div>
+                <footer id="panelFooter-0" class="">
+                    <nav id="nav_tab" cmd="void">
+                        <ul class="nav_tab_head">
+                            <li id="session" class="contact selected" cmd="clickNav" param="session">
+                                <a>
+                                    <div class="icon">
+                                    </div>
+                                    <span>
+                                        会话
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="contact" class="conversation" cmd="clickNav" param="contact">
+                                <a>
+                                    <div class="icon">
+                                    </div>
+                                    <span>
+                                        成员
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="plugin" class="plugin" cmd="clickNav" param="plugin">
+                                <a>
+                                    <div class="icon">
+                                    </div>
+                                    <span>
+                                        动态
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="setting" class="setup" cmd="clickNav" param="setting">
+                                <a>
+                                    <div class="icon">
+                                    </div>
+                                    <span>
+                                        设置
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="wallpaper-ctrl">
+                            <a class="wallpaperImg pre" id="wp-ctrl-pre" title="点击切换背景图片">
+                            </a>
+                            <a class="wallpaperImg next" id="wp-ctrl-next" title="点击切换背景图片">
+                            </a>
+                        </div>
+                        <div class="suggestion">
+                            <a>
+                                意见反馈
+                            </a>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+        <div id="container" class="container" style="display: block;">
+            <div class="panel profile-panel" id="panel-modifyPersonalInfo" cmd="void"
+            style="transition: -webkit-transform 0.4s cubic-bezier(0, 1, 0, 1); -webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 1, 0, 1); -webkit-transform: translate3d(0px, 0px, 0px); display: none;">
+                <header id="panelHeader-modifyPersonalInfo" class="panel_header">
+                    <div id="panelLeftButton-modifyPersonalInfo" class="btn btn_small btn_left btn_black btn_arrow_left">
+                        <span id="panelLeftButtonText-modifyPersonalInfo" class="btn_text">
+                            返回
+                        </span>
+                    </div>
+                    <h1 id="panelTitle-modifyPersonalInfo" class="text_ellipsis padding_20">
+                        修改个人信息
+                    </h1>
+                </header>
+                <div id="panelBodyWrapper-modifyPersonalInfo" class="panel_body_container"
+                style="top: 45px; overflow: hidden;">
+                    <div id="panelBody-modifyPersonalInfo" class="panel_body list_page notify_setting"
+                    style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+                        <div class="masker" style="position: absolute;z-index: 998;top: 0;left: 0;right: 0;bottom: 0;background-color: #000;opacity: .5;width: 700px; height: 100%;display:none">
+                        </div>
+                        <div class="upswfcontainer" style="position: absolute;z-index: 999;margin-left:50px;margin-top:60px;">
+                            <div id="altContent">
+                            </div>
+                        </div>
+                        <form id="userInfoForm" autocomplete="off" name="userInfo" method="post"
+                        style="margin:0" ng-submit="submit()">
+                            <div id="userInfo">
+                                <div class="userInfoLeft">
+                                    <ul style="margin-left:30px">
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        头像:
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <img title="点击更换头像" class="headImg" id="uploadHeadImg" style="height:100px;width:100px;cursor:pointer"
+                                                    src="{{me.headImg}}">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        姓名:
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <input id="userName" type="text" value="{{me.name}}" />
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        电话:
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <input id="userPhone" type="text" value="{{me.phone}}" />
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        所在地:
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <input id="userAddress" type="text" value="{{me.address}}" />
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span>
+                                                        个性签名:
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <textarea style="height: 60px;width: 223px;border-radius: 5px;" id="userSign"
+                                                    type="text">
+                                                        {{me.sign}}
+                                                    </textarea>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="userInfoRight">
+                                    <ul>
+                                        <li>
+                                            <span>
+                                                靓照:
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <img id="uploadPicture" title="点击更换个人形象" style="cursor:pointer;height:400px;width:250px;margin-top: 15px;"
+                                            class="picture" src="{{me.picture}}">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="submitUserInfo">
+                                    <input type="submit" class="input-submit" id="login_button" value="保  存"
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <ul id="pannelMenuList-modifyPersonalInfo" class="pannel_menu_list">
+                    </ul>
+                </div>
+            </div>
+            <div class="panel chat-panel" id="panel-5" cmd="void" style="transition: -webkit-transform 0.4s cubic-bezier(0, 1, 0, 1); -webkit-transition: -webkit-transform 0.4s cubic-bezier(0, 1, 0, 1); transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); display: none;">
+                <header id="panelHeader-5" class="panel_header">
+                    <h1 id="panelTitle-5" class="text_ellipsis padding_20">
+                        通讯录
+                    </h1>
+                    <button id="panelRightButton-5" class="btn btn_small btn_right btn_black btn_setting"
+                    cmd="clickRightButton">
+                        <span id="panelRightButtonText-5" class="btn_text">
+                            关闭
+                        </span>
+                    </button>
+                </header>
+                <div id="panelBodyWrapper-5" class="panel_body_container" style="top: 45px; overflow: hidden;">
+                    <div id="panelBody-5" class="panel_body chat_container" style="-webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) scale(1) translateZ(0px);">
+                        <div class="cbtnMode" id="cslider">
+                            <a href="javascript:void(0);" class="cprev cbtn">
+                            </a>
+                            <div class="cscroll">
+                                <ul class="cscrollContainer">
+                                </ul>
+                            </div>
+                            <a href="javascript:void(0);" class="cnext cbtn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none">
+            <input type="hidden" id="userId" value="{{me._id}}" />
+        </div>
+        <div id="showMessage" style="display:none">
+        </div>
+    </div>
+</div>

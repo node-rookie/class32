@@ -1,0 +1,190 @@
+.login_area{
+position: absolute;
+width: 100%;
+height: 100%;
+background: #f6f6f6;
+overflow: hidden;
+}
+
+#mc_login_title {
+	position: relative;
+	margin: 62px auto 80px;
+	text-align: center;
+	font-size: 30px;
+	width: 500px;
+}
+
+.signin {
+position: relative;
+width: 700px;
+margin: 0 auto;
+float: none;
+padding: 0;
+}
+
+form {
+margin: 0;
+padding: 0;
+}
+
+.qrlogin {
+width: 340px;
+}
+
+.qrlogin {
+float: left;
+text-align: center;
+}
+
+.qr_title_text {
+width: 200px;
+margin: 0;
+display: inline-block;
+height: 40px;
+margin-bottom: 15px;
+}
+
+.qr_title_text, .qr_title_text a, .input_login_text, .m_input_login_text {
+margin: 0;
+padding: 0;
+font-size: 18px;
+color: #838383;
+font-weight: 100;
+margin-bottom: 30px;
+}
+
+#qrlogin_step1 {
+position: relative;
+width: 250px;
+height: 180px;
+margin: 0 auto;
+border: 1px solid #8b8d90;
+}
+
+.qrlogin_bg {
+position: relative;
+}
+
+#qrlogin_img {
+margin-top: 3px;
+width: 230px;
+}
+
+img {
+border: 0 none;
+}
+
+
+.signin_sep {
+float: left;
+width: 1px;
+margin: 0 0 0 30px;
+height: 345px;
+position: relative;
+}
+
+.signin_sep_line {
+background: #E6E6E6;
+width: 100%;
+height: 100%;
+display: block;
+}
+
+.signin_sep_text {
+background: #F6F6F6;
+color: #b8b8b8;
+position: absolute;
+top: 40%;
+padding: 3px 0;
+width: 40px;
+display: block;
+left: -20px;
+text-align: center;
+}
+
+.signin .signin-area {
+float: left;
+width: 240px;
+margin: 0 0 0 50px;
+padding: 1px 17px;
+clear:right;
+}
+
+.input_login_text, .m_input_login_text {
+text-align: left;
+}
+
+
+.signin .signin-area-bg .padder .sign-input{
+margin-top: 0;
+}
+
+.signin .signin-area-bg {
+float: left;
+width: 296px;
+}
+
+.signin-area-bg {
+position: relative;
+min-height: 253px;
+}
+
+.signin .signin-area-bg .padder .sign-input {
+margin: 14px 0 0 0;
+}
+
+.err_m {
+margin-bottom: 14px;
+}
+
+.err_m {
+display: none;
+color: #f00;
+}
+
+.signin .signin-area-bg .padder span.input {
+display: block;
+}
+
+.signin .signin-area-bg .padder .input01 {
+width: 170px;
+border: 1px #ccc solid;
+color: #868686;
+font-size: 16px;
+padding: 2px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+-border-radius: 10px;
+outline: 0;
+}
+
+.signin .signin-area-bg .padder .input01 {
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+-border-radius: 5px;
+height: 40px;
+width: 240px;
+padding-left: 10px;
+}
+
+.signin  .logins input{
+margin-top:20px;
+color: #fff;
+font-size: 16px;
+width: 95px;
+}
+
+.signin  .logins #login_button{
+margin-left:3px;
+}
+
+.signin  .logins #reg_button{
+margin-left:43px;
+}
+.copyright_page_footer {
+text-align: center;
+color: #555;
+padding-top: 40px;
+clear:both;
+}
