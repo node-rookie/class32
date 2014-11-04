@@ -51,10 +51,7 @@ app.post('/api/login', function (req, res) {
 	//检查用户是否存在
 	Controllers.User.get(req.body.email, function (err, user) {
 		if (!user) {
-<<<<<<< HEAD
 			console.log('fasdfasdf');
-=======
->>>>>>> 0d1c1789a81b475c9048ae2c9cafa23b06765426
 			res.json(403,{msg: '用户不存在!'});
 			return;
 		}
@@ -81,7 +78,6 @@ app.post('/api/reg', function (req, res) {
 	//检查邮箱是否已经存在
 	Controllers.User.get(email,function(err, user) {
 		if(user){
-			console.log('dsfas')
 			res.json(403,{msg: '用户已存在!'});
 			return;
 		}
