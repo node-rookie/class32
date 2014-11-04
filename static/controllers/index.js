@@ -36,7 +36,7 @@ function($scope, $http, $location) {
         /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
         xiuxiu.embedSWF("altContent", 5, "600px", "400px");
         //修改为您自己的图片上传接口
-        xiuxiu.setUploadURL("http://localhost:3000/api/uploadHeadImg");
+        xiuxiu.setUploadURL("http://class32.herokuapp.com/api/uploadHeadImg");
         xiuxiu.setUploadType(2);
         xiuxiu.setUploadDataFieldName("Filedata");
         xiuxiu.onBeforeUpload = function(data, id) {
@@ -108,7 +108,7 @@ function($scope, $http, $location) {
         /*第1个参数是加载编辑器div容器，第2个参数是编辑器类型，第3个参数是div容器宽，第4个参数是div容器高*/
         xiuxiu.embedSWF("altContent", 1, "600px", "400px");
         //修改为您自己的图片上传接口
-        xiuxiu.setUploadURL("http://localhost:3000/api/uploadPicture");
+        xiuxiu.setUploadURL("http://class32.herokuapp.com/api/uploadPicture");
         xiuxiu.setUploadType(2);
         xiuxiu.setUploadDataFieldName("Filedata");
         xiuxiu.onBeforeUpload = function(data, id) {
