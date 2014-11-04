@@ -1080,7 +1080,7 @@ header, footer {
 }
 
 body {
-    background: url(image/bg.png);
+    /*background: url(image/bg.png);*/
     background-size: 5px 5px;
 }
 
@@ -1465,7 +1465,7 @@ nav li.point a:after {
 
 @media all and (min-width:1000px) {
     body {
-        background: url(image/fullbody.png);
+        /*background: url(image/fullbody.png);*/
         width: 100%;
         height: 100%;
         position: absolute;
@@ -1634,7 +1634,7 @@ nav li.point a:after {
             bottom: 0;
             width: 10px;
             height: 10px;
-            background: url(../img/state_sprite.gif) -108px 0 no-repeat;
+            /*background: url(../img/state_sprite.gif) -108px 0 no-repeat;*/
         }
 
     .panel header {
@@ -1707,7 +1707,7 @@ nav li.point a:after {
         bottom: 0;
         width: 10px;
         height: 10px;
-        background-image: url(../img/state_sprite.gif);
+        /*background-image: url(../img/state_sprite.gif);*/
         background-repeat: no-repeat;
     }
 
@@ -2313,7 +2313,7 @@ nav li.point a:after {
     .online_state_setting .down_arrow {
         width: 10px;
         height: 10px;
-        background-image: url(../img/state_sprite.gif);
+        /*background-image: url(../img/state_sprite.gif);*/
         background-repeat: no-repeat;
         background-position: -162px 4px;
         float: left;
@@ -2343,7 +2343,7 @@ nav li.point a:after {
             display: block;
             width: 10px;
             height: 10px;
-            background-image: url(../img/state_sprite.gif);
+            /*background-image: url(../img/state_sprite.gif);*/
             background-repeat: no-repeat;
             float: left;
             margin-right: 2px;
