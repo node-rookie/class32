@@ -51,7 +51,6 @@ app.post('/api/login', function (req, res) {
 	//检查用户是否存在
 	Controllers.User.get(req.body.email, function (err, user) {
 		if (!user) {
-			console.log('fasdfasdf');
 			res.json(403,{msg: '用户不存在!'});
 			return;
 		}
