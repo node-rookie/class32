@@ -34,13 +34,13 @@ app.get('/api/validate', function (req, res) {
 	if (_userId) {
 		Controllers.User.findUserById(_userId, function (err, user) {
 			if (err) {
-				res.json(401, {msg: err})
+				res.json(200, {msg: err})
 			} else {
 				res.json(user)
 			} 
 		})
 	} else {
-		res.json(401, null)
+		res.json(200, null)
 	}
 })
 
