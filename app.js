@@ -18,10 +18,12 @@ var sessionStore = new mongoStore({
 })
 
 app.use(flash())
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(session({
+	resave:false,
+	saveUninitialized:false,
 	secret: 'myclass',
 	cookie:{
 		maxAge: 60 * 60 * 1000
@@ -34,13 +36,13 @@ app.get('/api/validate', function (req, res) {
 	if (_userId) {
 		Controllers.User.findUserById(_userId, function (err, user) {
 			if (err) {
-				res.json(401, {msg: err})
+				res.status(401).json({msg: err})
 			} else {
-				res.json(user)
+				res.status(200).json(user)
 			} 
 		})
 	} else {
-		res.json(401, null)
+		res.status(401).json(null)
 	}
 })
 
@@ -51,17 +53,17 @@ app.post('/api/login', function (req, res) {
 	//检查用户是否存在
 	Controllers.User.get(req.body.email, function (err, user) {
 		if (!user) {
-			res.json(403,{msg: '用户不存在!'});
+			res.status(403).json({msg: '用户不存在!'});
 			return;
 		}
 		
 		//检查密码是否一致
 		if(user.password != password) {
-			res.json(403, {msg: '密码错误!'});
+			res.status(403).json({msg: '密码错误!'});
 			return;
 		}
 		req.session._userId = user._id
-		res.json(200,{user: user, msg: '登录成功!'})
+		res.status(200).json({user: user, msg: '登录成功!'})
 	})
 })
 
@@ -71,13 +73,13 @@ app.post('/api/reg', function (req, res) {
 	password_re = req.body.password_repeat;
 	//检测两次输入的密码是否一致
 	if (password_re != 323232) {
-		res.json(403,{msg:'邀请码错误!'});
+		res.status(403).json({msg:'邀请码错误!'});
 		return;
 	}
 	//检查邮箱是否已经存在
 	Controllers.User.get(email,function(err, user) {
 		if(user){
-			res.json(403,{msg: '用户已存在!'});
+			res.status(200).json({msg: '用户已存在!'});
 			return;
 		}
 	})
@@ -85,10 +87,10 @@ app.post('/api/reg', function (req, res) {
 	//新增用户
 	Controllers.User.addUser(req.body, function(err, user) {
 		if (err) {
-			res.json(500, {msg: '服务器异常,请稍后重试'})
+			res.status(500).json( {msg: '服务器异常,请稍后重试'})
 		} else {
 			req.session._userId = user._id
-			res.json(200,{user: user, msg: '注册成功'})
+			res.status(200).json({user: user, msg: '注册成功'})
 		}
 	})
 })
@@ -99,7 +101,7 @@ app.post('/api/reg', function (req, res) {
 
 app.get('/api/logout', function (req, res) {
 	req.session._userId = null
-	res.json(401)
+	res.status(401).json(null)
 })
 
 app.post('/api/uploadHeadImg', function (req, res) {
@@ -124,9 +126,9 @@ app.post('/api/uploadHeadImg', function (req, res) {
 			fs.renameSync(path,targetPath);
 			Controllers.User.modifyHeadImg(userId,headImg,function(err,user){
 				if(err){
-					res.json(200,{success:false,msg:'修改头像失败'});
+					res.status(200).json({success:false,msg:'修改头像失败'});
 				}else{
-					res.json(200,{success:true,msg:'修改头像成功',user:user});
+					res.status(200).json({success:true,msg:'修改头像成功',user:user});
 				}
 			})
 		})
@@ -154,9 +156,9 @@ app.post('/api/uploadPicture', function (req, res) {
 			fs.renameSync(path,targetPath);
 			Controllers.User.modifyPicture(userId,picture,function(err,user){
 				if(err){
-					res.json(200,{success:false,msg:'修改形象失败'});
+					res.status(200).json({success:false,msg:'修改形象失败'});
 				}else{
-					res.json(200,{success:true,msg:'修改形象成功',user:user});
+					res.status(200).json({success:true,msg:'修改形象成功',user:user});
 				}
 			})
 		})
@@ -168,7 +170,7 @@ app.post('/api/modifyUserInfo',function (req, res) {
 		//console.log(req.body)
 		Controllers.User.modifyUserInfo(_userId, req.body, function (err, user) {
 			if (err) {
-				res.json(401, {msg: err})
+				res.status(401).json({msg: err})
 			} else {
 				res.json(user)
 			} 
@@ -181,7 +183,7 @@ app.post('/api/modifyUserInfo',function (req, res) {
 app.get('/api/getContactList',function (req, res) {
 		Controllers.User.getContactList(function (err, users) {
 			if (err) {
-				res.json(401, {msg: err})
+				res.status(401).json({msg: err})
 			} else {
 				res.json(users)
 			} 
