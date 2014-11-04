@@ -14,7 +14,7 @@ var fs = require('fs')
 var mongoStore = require('connect-mongo')(session)
 var cookie = require('cookie')
 var sessionStore = new mongoStore({
-	url: 'mongodb://localhost/myclass'
+	url: 'mongodb://sunny:123456@linus.mongohq.com:10008/myclass'
 })
 
 app.use(flash())
