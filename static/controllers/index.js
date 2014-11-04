@@ -86,7 +86,7 @@ function($scope, $http, $location) {
                 name: $("#userName").val(),
                 phone: $("#userPhone").val(),
                 address: $("#userAddress").val(),
-                sign: $("#userSign").val()
+                sign: $("#userSign").text().trim()
             }
         }).success(function(obj) {
             $scope.$emit('login', obj);
