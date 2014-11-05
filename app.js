@@ -189,5 +189,6 @@ app.get('/api/getContactList',function (req, res) {
 			} 
 		})
 })
+
 app.listen(port);
 console.log('service have started');
